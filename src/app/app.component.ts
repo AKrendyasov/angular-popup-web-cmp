@@ -1,22 +1,17 @@
 import { Component, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
-import { PopupService } from './popup.service';
-import { PopupComponent } from './popup.component';
 import { AngularDivElement } from './angular-div-element';
 
 @Component({
   selector: 'app-root',
   template: `
-    <input #input value="Message">
-    <button (click)="popup.showAsComponent(input.value)">Show as component</button>
-    <button (click)="popup.showAsElement(input.value)">Show as element</button>
+    <angular-div-element></angular-div-element>
   `,
 })
 export class AppComponent {
-  constructor(injector: Injector, public popup: PopupService) {
-    // Convert `PopupComponent` to a custom element.
-    const PopupElement = createCustomElement(PopupComponent, {injector});
-    // Register the custom element with the browser.
-    customElements.define('popup-element', PopupElement);
+  constructor(injector: Injector) {
+
+        // Register the custom element with the browser.
+    customElements.define('angular-div-element', createCustomElement(AngularDivElement, {injector}));
   }
 }

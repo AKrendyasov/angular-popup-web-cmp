@@ -1,9 +1,8 @@
-import { Input, Component, ViewEncapsulation } from '@angular/core';
+import { Input, Component } from '@angular/core';
 
 @Component({
   selector: 'angular-div-element',
-  template: `<div>{{content}}</div>`,
-  encapsulation: ViewEncapsulation.Native
+  template: `<div>{{content}}</div>`
 })
 export class AngularDivElement {
   @Input() content = 'some content';

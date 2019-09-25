@@ -3,9 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { PopupComponent } from './popup.component';
 import { AngularDivElement } from './angular-div-element';
-import { PopupService } from './popup.service';
 
 // Include the `PopupService` provider,
 // but exclude `PopupComponent` from compilation,
@@ -13,10 +11,10 @@ import { PopupService } from './popup.service';
 
 @NgModule({
   imports: [BrowserModule, BrowserAnimationsModule],
-  providers: [PopupService],
-  declarations: [AppComponent, PopupComponent,AngularDivElement],
+  providers: [],
+  declarations: [AppComponent,AngularDivElement],
   bootstrap: [AppComponent],
-  entryComponents: [PopupComponent],
+  entryComponents: [AngularDivElement],
 })
 export class AppModule {
 }
