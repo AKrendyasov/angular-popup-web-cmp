@@ -10,7 +10,7 @@ export class ServersComponent implements OnInit {
   serverCreationStatus: string = 'No server was created'
   serverName: string
   serverCreated: boolean = false
-  servers: Array<string> =['test1', 'test2']
+  servers: Array<string> =[]
   constructor() {
      setTimeout(()=>this.allowNewServer=true, 2000)
    }
@@ -28,3 +28,16 @@ export class ServersComponent implements OnInit {
     this.serverName = (<HTMLInputElement>event.target).value
   }
 }
+
+//					,items		: {
+			//			xtype		: 'component'
+			//			,flex		: 1
+			//			,bind		: {
+			//				html		: '<app-uba-behavior-list fxFill groupId="{originalGroupId}"></app-uba-behavior-list>'
+			//			}
+			//		}
+
+      	// чтобы работало в webComponents
+	//@Input() set groupid(groupId: string) {
+	//	this.groupId = groupId;
+	//}
