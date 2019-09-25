@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'angular-div-element',
   template: `<div>{{content}}</div>`
 })
-export class AngularDivElement {
+export class AngularDivComponent {
  content: string = 'some content';
 }

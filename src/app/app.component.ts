@@ -1,6 +1,6 @@
 import { Component, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
-import { AngularDivElement } from './angular-div-element';
+import { AngularDivComponent } from './angular-div-component';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,6 @@ export class AppComponent {
   constructor(injector: Injector) {
 
         // Register the custom element with the browser.
-    customElements.define('angular-div-element', createCustomElement(AngularDivElement, {injector}));
+    customElements.define('angular-div-element', createCustomElement(AngularDivComponent, {injector}));
   }
 }
