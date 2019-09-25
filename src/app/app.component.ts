@@ -1,5 +1,4 @@
 import { Component, Injector } from '@angular/core';
-import { createCustomElement } from '@angular/elements';
 import { AngularDivComponent } from './angular-div-component';
 
 @Component({
@@ -7,9 +6,18 @@ import { AngularDivComponent } from './angular-div-component';
   templateUrl:'./app.component.html'
 })
 export class AppComponent {
-  constructor(injector: Injector) {
 
-        // Register the custom element with the browser.
-    customElements.define('angular-div-element', createCustomElement(AngularDivComponent, {injector}));
-  }
 }
+
+//					,items		: {
+			//			xtype		: 'component'
+			//			,flex		: 1
+			//			,bind		: {
+			//				html		: '<app-uba-behavior-list fxFill groupId="{originalGroupId}"></app-uba-behavior-list>'
+			//			}
+			//		}
+
+      	// чтобы работало в webComponents
+	//@Input() set groupid(groupId: string) {
+	//	this.groupId = groupId;
+	//}
