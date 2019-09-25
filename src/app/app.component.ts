@@ -4,10 +4,7 @@ import { AngularDivElement } from './angular-div-element';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <angular-div-element></angular-div-element>
-    <angular-div-element></angular-div-element>
-  `,
+  templateUrl:'./app.component.html'
 })
 export class AppComponent {
   constructor(injector: Injector) {
