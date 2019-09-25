@@ -2,6 +2,7 @@ import { Component, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { PopupService } from './popup.service';
 import { PopupComponent } from './popup.component';
+import { AngularDivElement } from './angular-div-element';
 
 @Component({
   selector: 'app-root',
