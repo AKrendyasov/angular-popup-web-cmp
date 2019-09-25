@@ -38,7 +38,7 @@ export class AppModule {
 	//}
 
     ngDoBootstrap(app) {
-    const config: NgElementConfig = {injector: this.injector};
+     const config: NgElementConfig = {injector: this.injector};
      customElements.define('angular-div-element', createCustomElement(AngularDivComponent, config));
     }
 
