@@ -6,6 +6,7 @@ import { AngularDivElement } from './angular-div-element';
   selector: 'app-root',
   template: `
     <angular-div-element></angular-div-element>
+    <angular-div-element></angular-div-element>
   `,
 })
 export class AppComponent {
